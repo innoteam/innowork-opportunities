@@ -1,0 +1,70 @@
+<?xml version='1.0'?>
+<application>
+
+	<definition>
+		<idname>innowork-opportunities</idname>
+		<release>
+			<version>1.3.0</version>
+			<date>2013/10/25</date>
+			<changesfile>CHANGES</changesfile>
+		</release>
+		<description>Sales opportunities</description>
+		<category>intranet</category>
+		<iconfile></iconfile>
+		<dependencies>
+			<dependency>innomatic[6.2]</dependency>
+			<dependency>innowork-core[3.3.0]</dependency>
+			<dependency>innowork-groupware[2.0]</dependency>
+		</dependencies>
+		<options>
+			<!-- <option></option> -->
+		</options>
+		<legal>
+			<author>
+				<name>Innoteam Srl</name>
+				<email>info@innoteam.it</email>
+				<web>http://www.innoteam.it/</web>
+			</author>
+			<copyright>Copyright (c) 2003-2014 Innoteam Srl</copyright>
+			<license>Commercial</license>
+			<licensefile>LICENSE</licensefile>
+		</legal>
+		<support>
+			<supportemail>helpdesk@innoteam.it</supportemail>
+			<bugsemail>helpdesk@innoteam.it</bugsemail>
+			<maintainer>
+				<name>Innoteam Srl</name>
+				<email>helpdesk@innoteam.it</email>
+			</maintainer>
+		</support>
+	</definition>
+
+	<components>
+
+		<domaingroup name="sales"
+			catalog="innowork-opportunities::misc" />
+
+        <catalog name="innowork-opportunities" />
+
+		<!-- Opportunities -->
+
+		<domainpanel name="innoworkopportunities"
+			file="innoworkopportunities.php" category="sales" themeicon="kedit"
+			themeicontype="apps"
+			catalog="innowork-opportunities::misc" />
+
+		<domaintable name="innowork_opportunities"
+			file="innowork_opportunities.xml" />
+
+		<class name="innowork/opportunities/InnoworkOpportunity.php" />
+
+		<innoworkitemtype name="opportunity" file="opportunity"
+			catalog="innowork-opportunities::misc"
+			classfile="innowork/opportunities/InnoworkOpportunity.php" classname="InnoworkOpportunity"
+			icon="kedit" icontype="apps" domainpanel="innoworkopportunities"
+			miniicon="kedit" summaryname="opportunity-name" showmode="app" />
+
+		<dashboardwidget name="innoworkopportunities" panel="innoworkopportunities" file="InnoworkOpportunitiesDashboardWidget.php" catalog="innowork-opportunities::dashboard_widgets" title="opportunities" class="\\Shared\\Dashboard\\InnoworkOpportunitiesDashboardWidget" />
+
+	</components>
+</application>

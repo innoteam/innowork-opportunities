@@ -1,0 +1,24 @@
+<?xml version='1.0'?>
+<database>
+
+    <table name="innowork_opportunities">
+
+        <field  name="id"   type="integer"  notnull="1"/>
+        <field  name="ownerid"  type="integer"  notnull="1"/>
+        <field  name="trashed"  type="boolean"/>
+        <field  name="opportunity"  type="text"/>
+        <field  name="companyid"   type="integer"/>
+        <field  name="description"  type="text"/>
+        <field  name="done" type="boolean"/>
+        <field name="duedate" type="timestamp"/>
+        <field name="value" type="decimal" length="15,2"/>
+        <field name="outcome" type="text"/>
+        <field name="outcometype" type="integer"/>
+
+        <key    field="id"  type="unique"/>
+
+    </table>
+
+    <sequence name="innowork_opportunities_id_seq"/>
+
+</database>
