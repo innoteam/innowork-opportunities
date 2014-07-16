@@ -64,7 +64,7 @@
 			icon="kedit" icontype="apps" domainpanel="innoworkopportunities"
 			miniicon="kedit" summaryname="opportunity-name" showmode="app" />
 
-		<dashboardwidget name="innoworkopportunities" panel="innoworkopportunities" file="InnoworkOpportunitiesDashboardWidget.php" catalog="innowork-opportunities::dashboard_widgets" title="opportunities" class="\\Shared\\Dashboard\\InnoworkOpportunitiesDashboardWidget" />
+		<dashboardwidget name="innoworkopportunities" panel="innoworkopportunities" file="InnoworkOpportunitiesDashboardWidget.php" catalog="innowork-opportunities::dashboard_widgets" title="opportunities" class="\Shared\Dashboard\InnoworkOpportunitiesDashboardWidget" />
 
 	</components>
 </application>
