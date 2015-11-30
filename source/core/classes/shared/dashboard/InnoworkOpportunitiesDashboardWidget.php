@@ -7,6 +7,8 @@ use \Shared\Wui;
 
 class InnoworkOpportunitiesDashboardWidget extends \Innomatic\Desktop\Dashboard\DashboardWidget
 {
+    protected $deferred = true;
+    
     public function getWidgetXml()
     {
         require_once('innowork/opportunities/InnoworkOpportunity.php');
